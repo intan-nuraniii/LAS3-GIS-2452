@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Museum Bandung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #3c3c3c;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #5a5a5a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #3c3c3c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        #museumChart {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tentang Museum Kota Bandung</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="maps.html">Maps</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h2>Sejarah Museum</h2>
+            <p>
+                Kota Bandung memiliki beberapa museum yang kaya akan sejarah, mencerminkan perkembangan kota serta budaya dan warisan Indonesia. Berikut adalah beberapa museum bersejarah di Bandung:
+            </p>
+            <p><strong>1. Museum Geologi</strong><br>
+                <em>Sejarah:</em> Didirikan pada tanggal 16 Mei 1928 oleh Pemerintah Hindia Belanda, Museum Geologi Bandung awalnya berfungsi sebagai tempat penyimpanan dan penelitian bahan-bahan geologi yang dikumpulkan oleh para ahli geologi dari seluruh Indonesia. Setelah kemerdekaan Indonesia, museum ini menjadi bagian dari Direktorat Geologi dan berfungsi sebagai pusat pendidikan dan informasi geologi.<br>
+                <em>Fokus:</em> Koleksi museum ini mencakup berbagai artefak geologi, termasuk fosil, mineral, dan batuan, serta pameran tentang proses geologi dan sejarah bumi.
+            </p>
+            <p><strong>2. Museum Konferensi Asia-Afrika</strong><br>
+                <em>Sejarah:</em> Museum ini didirikan untuk mengenang Konferensi Asia-Afrika yang berlangsung di Bandung pada tanggal 18-24 April 1955. Konferensi ini merupakan momen penting dalam sejarah dunia, di mana negara-negara dari Asia dan Afrika bersatu untuk menentang kolonialisme dan mempromosikan kerjasama internasional.<br>
+                <em>Fokus:</em> Museum ini menyimpan dokumentasi, foto, dan artefak yang terkait dengan konferensi bersejarah tersebut, termasuk naskah pidato dan benda-benda yang digunakan selama konferensi.
+            </p>
+            <p><strong>3. Museum Gedung Sate</strong><br>
+                <em>Sejarah:</em> Museum ini berada di dalam Gedung Sate, yang merupakan salah satu bangunan bersejarah paling ikonik di Bandung. Gedung Sate dibangun pada tahun 1920 dan awalnya difungsikan sebagai kantor pusat pemerintahan Hindia Belanda. Kini, Gedung Sate menjadi kantor Gubernur Jawa Barat dan museum yang menceritakan sejarah bangunan serta perkembangan Kota Bandung.<br>
+                <em>Fokus:</em> Museum ini menampilkan sejarah arsitektur Gedung Sate, serta sejarah Kota Bandung dari masa kolonial hingga era modern.
+            </p>
+            <p><strong>4. Museum Sri Baduga</strong><br>
+                <em>Sejarah:</em> Museum Sri Baduga didirikan pada tahun 1974 dan dinamai berdasarkan nama Raja Sri Baduga Maharaja, seorang raja besar dalam sejarah Sunda. Museum ini dibangun di bekas kawasan kebon binatang Tegallega dan bertujuan untuk mengabadikan sejarah dan budaya Sunda.<br>
+                <em>Fokus:</em> Koleksi museum ini mencakup berbagai artefak sejarah dan budaya Sunda, seperti alat-alat tradisional, senjata, pakaian adat, dan benda-benda ritual. Museum ini juga menampilkan pameran tentang sejarah perkembangan kota Bandung dan Jawa Barat secara umum.
+            </p>
+
+            <p>
+            </p>
+
+            <h2>Beberapa Koleksi Museum</h2>
+            <p>
+                Museum ini memiliki berbagai koleksi yang mencakup artefak arkeologi, karya seni, dokumen sejarah, 
+                serta pameran yang menceritakan perjalanan sejarah Bandung. Beberapa koleksi terkenal kami termasuk 
+                artefak dari zaman kolonial dan lukisan karya seniman terkenal Indonesia.
+            </p>
+
+            <div class="gallery">
+                <img src="https://backpanel.kemlu.go.id/sites/pusat/PublishingImages/Tentang%20Kami/Museum%20Konferensi%20Asia%20Afrika_jpg.jpg" alt="Koleksi 1">
+                <img src="https://cdn1.katadata.co.id/media/images/thumb/2021/06/03/2021_06_03-14_48_13_40aeeb85ada2de344eac382eee02f576_960x640_thumb.jpg" alt="Koleksi 2">
+                <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/79/2023/09/22/museumgeobdg-2053104401.png" alt="Koleksi 3">
+            </div>
+
+            <h2>Jumlah Pengungjung Museum di Bandung Pertahunnya</h2>
+            <canvas id="museumChart" width="400" height="150"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Museum Kota Bandung. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('museumChart').getContext('2d');
+        const museumChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Museum Geologi', 'Museum Konferensi Asia-Afrika', 'Museum Gedung Sate', 'Museum Sri Baduga'],
+                datasets: [{
+                    label: 'Jumlah Pengunjung (ribu)',
+                    data: [120, 90, 60, 45], // Data pengunjung dalam ribuan
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Jumlah Pengunjung (ribu)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Museum'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

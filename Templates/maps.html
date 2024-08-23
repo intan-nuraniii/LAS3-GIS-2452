@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Lokasi Museum di Bandung</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #map {
+            height: 85%;
+            width: 100%;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Peta Lokasi Museum di Bandung</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="maps.html">Maps</a>
+    </nav>
+
+    <div id="map"></div>
+
+    <footer>
+        <p>&copy; 2024 Museum Kota Bandung. Hak Cipta Dilindungi.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-6.971386, 107.632456], 14); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var lokasi = [
+            {
+                "latitude": -6.851323073,
+                "longitude": 107.5963994,
+                "name": "Museum 3D",
+                "address": "JL. DR. SETIABUDI, Bandung",
+                "image": "https://bandungkunafe.com/wp-content/uploads/2017/12/amazing-art-world-3D-bandungkunafe-1.jpg"  
+            },
+            {
+                "latitude": -6.878118181,
+                "longitude": 107.5876658,
+                "name": "Museum Barli",
+                "address": "JL. PROF. DR. SUTAMI NO. 91, Bandung",
+                "image": "https://direktorionlinemuseumdiindonesia.wordpress.com/wp-content/uploads/2017/05/barli4.jpg"  
+            },
+            {
+                "latitude": -6.921545995,
+                "longitude": 107.5776869,
+                "name": "Museum Kebudayaan Tionghoa",
+                "address": "JL. NANA ROHANA NO. 37, Bandung",
+                "image": "https://museum.co.id/wp-content/uploads/2020/09/download-2021-09-02T072829.187.jpeg"  
+            },
+            {
+                "latitude": -6.920928345,
+                "longitude": 107.6128362,
+                "name": "Museum Preanger",
+                "address": "JL. ASIA AFRIKA NO. 81, Bandung",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQrL3NLguXCgo-u0pW17B3sefv_w5srOGqxSQKWGvn_T9xcQ3MBLiu2YAEWSSdq83SB1U&usqp=CAU"  
+            },
+            {
+                "latitude": -6.921545995,
+                "longitude": 107.5776869,
+                "name": "Museum Kota Bandung",
+                "address": "JL. ACEH NO. 47, Bandung",
+                "image": "https://asset-2.tstatic.net/jabar/foto/bank/images/museum-kota-bandung_20181031_135440.jpg"  
+            },
+            {
+                "latitude": -6.917027279,
+                "longitude": 107.6106136,
+                "name": "Museum Mandala Wangsit Siliwangi",
+                "address": "JL. LEMBONG NO. 39, Bandung",
+                "image": "https://i.pinimg.com/736x/d8/94/01/d89401e67abb72a020992e89935f2577.jpg"  
+            },
+            {
+                "latitude": -6.937387893,
+                "longitude": 107.6038584,
+                "name": "Museum Sri Baduga",
+                "address": "JL. BKR NO. 185, Bandung",
+                "image": "https://asset.kompas.com/crops/_Rz_vrPJji7Z7jJdlZlfoZqZxYg=/0x78:1920x1358/780x390/data/photo/2023/03/06/64055c477df26.jpeg"  
+            },
+            {
+                "latitude": -6.900673596,
+                "longitude": 107.6222546,
+                "name": "Museum Geologi Bandung",
+                "address": "JL. DIPONEGORO NO. 57, Bandung",
+                "image": "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/79/2023/09/22/museumgeobdg-2053104401.png"  
+            },
+            {
+                "latitude": -6.902393776,
+                "longitude": 107.6194369,
+                "name": "Museum Gedung Sate",
+                "address": "JL. DIPONEGORO NO. 22, Bandung",
+                "image": "https://cdn1.katadata.co.id/media/images/thumb/2021/06/03/2021_06_03-14_48_13_40aeeb85ada2de344eac382eee02f576_960x640_thumb.jpg"  
+            },
+            {
+                "latitude": -6.921023987,
+                "longitude": 1107.6103202,
+                "name": "Museum Konferensi Asia Afrika",
+                "address": "JL. ASIA AFRIKA NO. 65, Bandung",
+                "image": "https://backpanel.kemlu.go.id/sites/pusat/PublishingImages/Tentang%20Kami/Museum%20Konferensi%20Asia%20Afrika_jpg.jpg"  
+            },
+            {
+                "latitude": -6.901848478,
+                "longitude": 107.6204466,
+                "name": "Museum Pos Indonesia",
+                "address": "JL. CILAKI NO. 73, Bandung",
+                "image": "https://cdn.idntimes.com/content-images/post/20221222/screenshot-33-ed9879a29d57a5735e4059b02fdffd90_600x400.png"  
+            },
+            {
+                "latitude": -6.919522892,
+                "longitude": 107.6078727,
+                "name": "Museum Lapas Banceuy",
+                "address": "JL. BANCEUY, Bandung",
+                "image": "https://awsimages.detik.net.id/community/media/visual/2022/06/01/situs-penjara-banceuy-5_169.jpeg?w=1200"  
+            },
+            {
+                "latitude": -6.919837789,
+                "longitude": 107.6186379,
+                "name": "Museum Mainan",
+                "address": "JL. SUNDA NO. 39, Bandung",
+                "image": "data:image/jpeg;base64,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"  
+            },
+            {
+                "latitude": -6.92682394,
+                "longitude": 107.6296261,
+                "name": "Museum Virajati Seskoad",
+                "address": "JL. GATOT SUBROTO NO. 96, Bandung",
+                "image": "https://museum.co.id/wp-content/uploads/2020/09/CsI3XRLXgAAjlnA.jpg"  
+            },
+            {
+                "latitude": -6.940388197,
+                "longitude": 107.6739865,
+                "name": "Museum Nike Ardilla",
+                "address": "KOMP. ARYA GRAHA. JL. ARIA UTAMA NO. 5, Bandung",
+                "image": "https://salsawisata.com/wp-content/uploads/2023/07/museum-nike-ardilla-bandung.jpg"  
+            },
+            {
+                "latitude": -6.935365391,
+                "longitude": 107.6633861,
+                "name": "Museum Hall Of Fame Jawa Barat",
+                "address": "BAPUSIPDA, Bandung",
+                "image": "https://1.bp.blogspot.com/-xyGevPaItAY/X5KVueUO2JI/AAAAAAAACHI/eMdfARQQwl8ZqIaE85_QfAXLuIxsEgucgCLcBGAsYHQ/s2048/%255BJejakakhi%255DJelajah-Museum-Berkumpulnya-Pesohor-Jawa-Barat-di-Hall-Of-Fame-Panggung-Inohong20.jpg"  
+            },
+            {
+                "latitude": -6.859695228,
+                "longitude": 107.5950272,
+                "name": "Museum Pendidikan Nasional",
+                "address": "JL. DR.SETIABUDI NO. 225, Bandung",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSStVf0Yik-qax1TGXKWIxAvpEFgGXbYvw1qg&s"  
+            },
+            {
+                "latitude": -6.913239277,
+                "longitude": 107.6091871,
+                "name": "Museum Indonesia Menggugat",
+                "address": "JL. PERINTIS KEMERDEKAAN NO. 5, Bandung",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwPmdmFx5ZEHLR6DjbbANN5YrwMqJ_jHlqPw&s"  
+            },
+            {
+                "latitude": -6.893294233,
+                "longitude": 107.6198334,
+                "name": "Museum Perjuangan Rakyat Jawa Barat",
+                "address": "JL. DIPATIUKUR NO. 48, Bandung",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHakPtj0z8-rOKPumq6n7igUKk3-tZWvBuTw&s"  
+            },
+            {
+                "latitude": -6.917002477,
+                "longitude": 107.6821219,
+                "name": "Museum Bumi Pakarang sasuhunan",
+                "address": "JL. PINUS GALUH I NO. 5, Bandung",
+                "image": "https://sigapnews.co.id/uploads/1666852154UM%20BUMI%20PAKARANG.jpg"  
+            },
+            {
+                "latitude": -6.899361714,
+                "longitude": 107.6001821,
+                "name": "Museum Bio Farma",
+                "address": "JL. PASTEUR NO. 28, Bandung",
+                "image": "https://4.bp.blogspot.com/-Q2LOCMrrjts/Wt_q0V9rSEI/AAAAAAAALOY/UIFSr3t6bo4Dj6l3dxLITw_mEChGFNI_gCLcBGAs/s1600/GEDUNG%2BBIOFARMA.jpg"  
+            }
+        ];
+
+    
+        lokasi.forEach(function(lokasi) {
+            var marker = L.marker([lokasi.latitude, lokasi.longitude]).addTo(map);
+            var popupContent = "<b>" + lokasi.name + "</b><br>" + lokasi.address;
+            if (lokasi.image) {
+                popupContent += "<br><img src='" + lokasi.image + "' alt='" + lokasi.name + "' style='width:200px;height:auto;'>";
+            }
+            
+            marker.bindPopup(popupContent);
+        });
+    </script>
+</body>
+</html>
